@@ -1,5 +1,4 @@
-import dotenv from "dotenv";
-dotenv.config();
+import { config } from './config';
 import { Client, EmbedBuilder, TextChannel } from "discord.js";
 
 const client = new Client({
@@ -21,7 +20,7 @@ const client = new Client({
 //     });
 // }
 
-client.login(process.env.DISCORD_TOKEN);
+client.login(config.DISCORD_TOKEN);
 
 client.on('ready', async () => {
     // await sendIntroMessage();
