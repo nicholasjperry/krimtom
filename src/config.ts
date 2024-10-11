@@ -2,14 +2,13 @@ import dotenv from "dotenv";
 
 dotenv.config();
 
-const { DISCORD_TOKEN, DISCORD_CLIENT_ID, API_KEY } = process.env;
+const { BOT_TOKEN, API_KEY } = process.env;
 
-if (!DISCORD_TOKEN || !DISCORD_CLIENT_ID) {
+if (!BOT_TOKEN) {
     throw new Error("Missing env variables");
 }
 
 export const config = {
-    DISCORD_TOKEN,
-    DISCORD_CLIENT_ID,
+    BOT_TOKEN,
     API_KEY,
 }

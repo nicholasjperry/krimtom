@@ -84,9 +84,9 @@ const apiKey = config.API_KEY;
 
 // #endregion
 
-client.login(config.DISCORD_TOKEN);
+client.login(config.BOT_TOKEN);
 
-client.once('ready', async (readyClient) => {
+client.on('ready', async (readyClient) => {
     console.log(`Ready! Logged in as ${readyClient.user.tag}`);
     // await createEvent;
 });
